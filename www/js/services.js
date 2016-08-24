@@ -7,13 +7,12 @@ angular.module('starter.services', [])
   var chats = [{
     id: 0,
     name: 'Ben Sparrow',
-    lastText: 'You on your way?',
-    face: 'img/ben.png'
+    Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet placerat odio. Aenean non erat nec purus lacinia maximus ac non nulla. In non feugiat purus, sed lobortis augue. Integer placerat malesuada odio, quis efficitur sapien. Sed fermentum purus vel tincidunt commodo. Aenean nec nisl vitae felis varius sagittis et a tortor. Praesent placerat, magna eget posuere aliquet, dui elit sagittis nulla, a finibus dui risus venenatis erat. Mauris varius pharetra dui a feugiat. Nulla imperdiet in eros eu ultrices.'
   }, {
     id: 1,
     name: 'Max Lynx',
-    lastText: 'Hey, it\'s me',
-    face: 'img/max.png'
+    Text: 'Hey, it\'s me'
+    
   }];
 
   return {
