@@ -1,5 +1,8 @@
 angular.module('starter.services', ["ionic","firebase"])
-
+.factory("Items", function($firebaseArray) {
+  var itemsRef = new Firebase("https://notas-38791.firebaseio.com");
+  return $firebaseArray(itemsRef);
+})
 .factory('Chats', function() {
   // Might use a resource here that returns a JSON array
 
