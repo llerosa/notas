@@ -1,15 +1,24 @@
 <ion-view view-title="Dashboard">
   <ion-header-bar class="top">
-      <h1 class="title">Items</h1>
-      <button class="button button-icon ion-plus" ng-click="addItem()">
+      <h1 class="title">Crear Nota</h1>
+      <!--<button class="button button-icon ion-plus" ng-click="addItem()">-->
+      
+        
       </button>
   </ion-header-bar>
-
-  <ion-content>
-    <ion-list>
-      <ion-item ng-repeat="item in items">
-        {{item.name}}
+  <div class="nota">
+        <ion-item>
+      <label class="item item-input">
+        <span class="input-label">Titulo</span>
+        <input type="text" id="texto">
+      </label>
       </ion-item>
-    </ion-list>
-    </ion-content>
+      <ion-item>
+    <label> Descripción</label>
+      <textarea rows="6" placeholder="enter long description here..." style="width:100%" id="desc"></textarea>
+    </ion-item>
+    <button class="button button-small" ng-click="addItem()">
+      Submit
+    </button>
+    </div>
 </ion-view>

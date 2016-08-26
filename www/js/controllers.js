@@ -3,13 +3,6 @@ angular.module('starter.controllers', [])
 .controller('DashCtrl', function($scope) {})
 
 .controller('ChatsCtrl', function($scope, Chats) {
-  // With the new view caching in Ionic, Controllers are only called
-  // when they are recreated or on app start, instead of every page change.
-  // To listen for when this page is active (for example, to refresh data),
-  // listen for the $ionicView.enter event:
-  //
-  //$scope.$on('$ionicView.enter', function(e) {
-  //});
 
   $scope.chats = Chats.all();
   $scope.remove = function(chat) {
@@ -26,14 +19,25 @@ angular.module('starter.controllers', [])
     enableFriends: true
   };
 })
+
+
 .controller("ListCtrl", function($scope, Items) {
   $scope.items = Items;
   $scope.addItem = function() {
-    var name = prompt("¿Qué vas a comprar?");
-    if (name) {
+    var myTitle = document.getElementById("texto").value;
+    var myDesc = document.getElementById("desc").value;
+    alert("nota enviada");
+    document.getElementById("texto").value ="";
+    document.getElementById("desc").value ="";
+    if (myTitle) {
       $scope.items.$add({
-        "name": name
+        "title": myTitle,
+        "desc": myDesc
       });
     }
+  };
+  $scope.elimina = function(itemElimina){
+    var eliminalo = new Firebase("https://notas-38791.firebaseio.com/"+itemElimina);
+    eliminalo.remove();
   };
 });

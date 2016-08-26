@@ -3,10 +3,8 @@ angular.module('starter.services', ["ionic","firebase"])
   var itemsRef = new Firebase("https://notas-38791.firebaseio.com");
   return $firebaseArray(itemsRef);
 })
-.factory('Chats', function() {
-  // Might use a resource here that returns a JSON array
 
-  // Some fake testing data
+.factory('Chats', function() {
   var chats = [{
     id: 0,
     name: 'Ben Sparrow',
