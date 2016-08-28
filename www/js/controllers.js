@@ -10,8 +10,19 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
+.controller('ChatDetailCtrl', function($scope, $stateParams) {
+  //$scope.chat = Chats.get($stateParams.chatId);
+  var par = $stateParams.Id;
+  var miUrl = "https://notas-38791.firebaseio.com/"+par;
+  var detalles = new Firebase(miUrl);
+  detalles.once('value', function(dataSnapshot) {
+    // code to handle new value.
+    var data = dataSnapshot.val();
+    $scope.item = data;
+    
+  });
+  
+  
 })
 
 .controller('AccountCtrl', function($scope) {

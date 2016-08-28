@@ -19,7 +19,8 @@
     </ion-list>-->
 
     <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="item in items">
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="item in items" 
+      type="item-text-wrap" href="#/tab/chats/{{item.$id}}">
        <h1> {{item.title}}</h1>
        <p> {{item.desc}}</p>
        <i class="icon ion-chevron-right icon-accessory"></i>
